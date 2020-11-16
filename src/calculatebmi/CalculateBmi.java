@@ -11,21 +11,26 @@ public class CalculateBmi {
         String strWt;
         
         //This is one way to record user input
-        strHt = JOptionPane.showInputDialog(null, "Please enter height");
-        strWt = JOptionPane.showInputDialog(null, "Please enter weight");
+        strHt = JOptionPane.showInputDialog(null, "Please enter height in meters");
+        strWt = JOptionPane.showInputDialog(null, "Please enter weight in kilogrammes");
         
         //Define variables needed for calculations
         double ht;
         double wt;
         double bmi;
         
-        //This is onw way to convert String to double
+        //This is one way to convert String to double
         ht = Double.parseDouble(strHt);
         wt = Double.parseDouble(strWt);
 
         bmi = wt/(ht*ht);
         
-        System.out.println("Your BMI is " + bmi + "kg/m2");
+        //Define variables needed for Display
+        String resultDisplay = "Your BMI is " + bmi + " kg/m2" ;
+        
+        //This is one way to Display Result
+        JOptionPane.showMessageDialog(null, resultDisplay);
+       
         
     }
     
